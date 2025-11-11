@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  todo-app:
+    container_name: todo_app
+    build:
+      context: .       # current directory (where Dockerfile is)
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"      # host:container
+    restart: unless-stopped
+    image: todo-app:latest
