@@ -10,7 +10,7 @@ function addTask() {
   const task = inputBox.value.trim();
 
   if (task === "") {
-    alert("Please write something!");
+    alert("Please write Something!");
     return;
   }
 
