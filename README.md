@@ -5,7 +5,7 @@ It allows users to add, mark complete, delete, and store tasks locally using the
 
 ---
 
-## 🚀 Features
+## 🚀 Add Features
 
 - ➕ Add new tasks easily  
 - ✅ Mark tasks as completed  
