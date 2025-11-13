@@ -1,8 +1,8 @@
 # Use official nginx lightweight image
-FROM nginx:alpine
+FROM iirshad/nginx_img
 
 # Author / metadata (optional)
-LABEL maintainer="Irshad Ahmad <irshadaliahmad587@gmail.com>"
+LABEL maintainer="Irshad Ahmad"
 
 # Remove default nginx html (optional but clean)
 RUN rm -rf /usr/share/nginx/html/*
