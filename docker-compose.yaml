@@ -1,12 +1,15 @@
 version: "3.9"
 
 services:
-  todo-app:
-    container_name: todo_list_app_containeer
-    build:
-      context: .       # current directory (where Dockerfile is)
-      dockerfile: Dockerfile
+ mysql:
+    image: mysql:latest
+    container_name: mysql_con
+    environment:
+      MYSQL_DATABASE: "devops"
+      MYSQL_ROOT_PASSWORD: "iram143"
     ports:
-      - "8080:80"      # host:container
-    restart: unless-stopped
-    image: todo-app:latest
+      - "3306:3306"
+    volumes:  
+      - mysql_data:/var/lib/mysql
+    networks:
+      - todo-net
