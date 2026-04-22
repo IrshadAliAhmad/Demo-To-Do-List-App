@@ -25,5 +25,5 @@ It allows users to add, mark complete, delete, and store tasks locally using the
 
 ---
 
-## 📂 Folder Structure
+
 
