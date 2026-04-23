@@ -13,3 +13,11 @@ services:
       - mysql_data:/var/lib/mysql
     networks:
       - todo-net
+
+# 👇 Declare volume & Network
+volumes:
+  mysql_data:
+
+# 👇 ALSO ADD THIS (warna network error aayega)
+networks:
+  todo-net:
