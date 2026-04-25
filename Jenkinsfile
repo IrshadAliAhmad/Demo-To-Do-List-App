@@ -37,7 +37,7 @@ pipeline{
                 echo "Deploying the code"
                 script{
                    // docker_run()
-                    docker-compose()
+                    docker_compose()
                 }
             }
         }
