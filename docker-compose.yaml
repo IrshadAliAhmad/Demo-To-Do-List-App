@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
- mysql:
+  mysql:
     image: mysql:latest
     container_name: mysql_con
     environment:
@@ -14,10 +14,18 @@ services:
     networks:
       - todo-net
 
-# 👇 Declare volume & Network
+  app:
+    image: iirshad/todo-img:latest   # 👈 tumhari app image
+    container_name: todo_con
+    ports:
+      - "8080:80"   # 👈 browser access
+    depends_on:
+      - mysql
+    networks:
+      - todo-net
+
 volumes:
   mysql_data:
 
-# 👇 ALSO ADD THIS (warna network error aayega)
 networks:
   todo-net:
